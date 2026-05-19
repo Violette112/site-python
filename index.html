@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+
+<header>
+    <h1>Projet : Pixel Art sur NumWorks</h1>
+    <p>Transformer une image en code Python pour calculatrice</p>
+    <p><strong>Mergnac Violette - 2nde4</strong></p>
+</header>
+
+<div class="container">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #111827);
+    color: #e5e7eb;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: #1f2937;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+h2 {
+    color: #60a5fa;
+}
+
+img {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+code {
+    background: #0b1220;
+    padding: 15px;
+    display: block;
+    border-radius: 10px;
+    overflow-x: auto;
+    color: #22c55e;
+}
+
+.warning {
+    background: #3b1d1d;
+    border-left: 5px solid #ef4444;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.success {
+    background: #1b3a2a;
+    border-left: 5px solid #22c55e;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+
+
+<!-- INTRO -->
+<div class="card">
+<h2>Introduction</h2>
+<p>
+Dans ce projet, j’ai appris à afficher une image sur une calculatrice NumWorks en utilisant du code Python.
+</p>
+
+<p>
+L’objectif était de comprendre comment une image peut être reproduite à l’aide de pixels et de coordonnées.
+J’ai utilisé une image déjà existante et je l’ai transformée en code.
+</p>
+
+<p>
+Ce travail m’a permis de découvrir les bases de la programmation graphique sur un système simple comme la NumWorks.
+</p>
+</div>
+
+<!-- ETAPE 1 -->
+<div class="card">
+<h2>1. Image de départ</h2>
+<p>Voici l’image originale utilisée pour le projet :</p>
+<img src="etoileoriginale.png">
+</div>
+
+<!-- ETAPE 2 -->
+<div class="card">
+<h2>2. Préparation de l’image</h2>
+<p>
+Pour ce projet, je n’ai pas créé le pixel art moi-même. J’ai directement utilisé une image déjà faite, adaptée pour être reproduite sur la calculatrice NumWorks.
+</p>
+
+<p>
+L’objectif était de comprendre comment transformer cette image en code Python sans passer par une conversion manuelle. J'ai d'abord utilisé un site pour redimentionner mon image:
+</p>
+
+<img src="Capture d’écran_18-5-2026_214348_resizeimage.io.jpeg">
+
+<p>Voici un aperçu de l’image réduite à 320 par 222 px:</p>
+<img src="etoileimage.png">
+</div>
+
+<!-- ETAPE 3 -->
+<div class="card">
+<h2>3. Connexion de la calculatrice</h2>
+<p>
+J’ai connecté la calculatrice NumWorks à l’ordinateur pour transférer le code Python.
+</p>
+<img src="Capture d’écran_18-5-2026_222848_www.numworks.com.jpeg">
+
+</div>
+
+<!-- ETAPE 4 -->
+<div class="card">
+<h2>4. Installation du script</h2>
+<p>Le code Python a été importé dans l’application Python de la calculatrice :</p>
+
+<code>
+from kandinsky import fill_rect
+
+# Taille des pixels
+p = 6
+
+# Position de l'étoile
+x0 = 55
+y0 = 25
+
+# Couleurs
+NOIR = (0,0,0)
+JAUNE = (255,240,0)
+JAUNE2 = (255,220,0)
+ORANGE = (255,180,40)
+MARRON = (160,100,0)
+BLANC = (255,255,200)
+
+# Sprite fidèle à l’image
+etoile = [
+"........MM........",
+"......MMJJMM......",
+".....MJJJJJJM.....",
+"....MJJJJJJJJM....",
+"...MJJBBJJBBJJM...",
+"MMMJJJJJJJJJJJMMM",
+".MJJJJNJJNJJJJJM.",
+"..MJJJNJJNJJJM..",
+"...MJJJJJJJJJM...",
+"...MJJOOOOJJJM...",
+"..MMJJJJJJJJMM..",
+".MJJJJJJJJJJJJM.",
+"MJJJJJJJJJJJJJJM",
+"MJJJJJMMMMJJJJJM",
+".MMMMM....MMMMM."
+]
+
+# Dessin principal
+for y in range(len(etoile)):
+    for x in range(len(etoile[y])):
+
+        c = etoile[y][x]
+
+        if c == "M":
+            couleur = MARRON
+        elif c == "J":
+            couleur = JAUNE
+        elif c == "O":
+            couleur = ORANGE
+        elif c == "B":
+            couleur = BLANC
+        elif c == "N":
+            couleur = NOIR
+        else:
+            continue
+
+        fill_rect(x0 + x*p, y0 + y*p, p, p, couleur)
+</code>
+
+<p>Capture d’écran de l’installation :</p>
+<img src="Capture d’écran_18-5-2026_222533_my.numworks.com.jpeg">
+</div>
+
+<!-- ETAPE 5 -->
+<div class="card">
+<h2>5. Résultat final</h2>
+<p>Voici le rendu final sur la calculatrice :</p>
+<img src="Capture d’écran_18-5-2026_223637_my.numworks.com.jpeg">
+</div>
+
+<!-- DIFFICULTES -->
+<div class="card warning">
+<h2>Difficultés rencontrées</h2>
+<ul>
+<li>Image trop grande pour être convertie directement</li>
+<li>Mauvais format de pixels au début (image floue ou décalée)</li>
+<li>Problèmes d’alignement sur la grille NumWorks</li>
+<li>Gestion des couleurs limitée</li>
+</ul>
+</div>
+
+<!-- CONCLUSION -->
+<div class="card success">
+<h2>Conclusion</h2>
+
+<p>
+Pour conclure, ce projet m’a permis de découvrir une nouvelle manière d’utiliser Python sur la calculatrice NumWorks.
+J’ai appris comment une image peut être reproduite grâce à du code en utilisant des pixels, des coordonnées et des couleurs.
+</p>
+
+<p>
+Même si je suis partie d’une image déjà existante, j’ai dû comprendre comment la retranscrire correctement dans le programme afin qu’elle s’affiche de manière fidèle sur la calculatrice.
+J’ai aussi appris à utiliser le module <strong>kandinsky</strong>, qui permet de dessiner directement à l’écran avec Python.
+</p>
+
+<p>
+Ce projet m’a également demandé de faire plusieurs essais pour ajuster la taille, les couleurs et le placement des pixels.
+J’ai rencontré certaines difficultés, comme des images trop grandes ou des problèmes de format, mais cela m’a aidée à mieux comprendre le fonctionnement de l’affichage graphique.
+</p>
+
+<p>
+Enfin, cette activité m’a permis de développer ma logique, ma patience et mes compétences en programmation.
+J’ai trouvé intéressant de voir qu’avec un langage simple comme Python, il est possible de créer des dessins et des projets visuels directement sur une calculatrice.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+Projet Python - NumWorks Pixel Art
+</footer>
+
+</body>
+</html>
