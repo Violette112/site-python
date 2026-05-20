@@ -1,7 +1,91 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>Projet : Pixel Art sur NumWorks</title>
+    <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0f172a, #111827);
+        color: #e5e7eb;
+    }
+
+    header {
+        text-align: center;
+        padding: 50px 20px;
+        background: linear-gradient(90deg, #2563eb, #7c3aed);
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 32px;
+    }
+
+    header p {
+        opacity: 0.9;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .card {
+        background: #1f2937;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+        color: #60a5fa;
+    }
+
+    img {
+        width: 400px;
+        max-width: 100%;
+        border-radius: 10px;
+        margin-top: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    code {
+        background: #0b1220;
+        padding: 15px;
+        display: block;
+        border-radius: 10px;
+        overflow-x: auto;
+        color: #22c55e;
+    }
+
+    .warning {
+        background: #3b1d1d;
+        border-left: 5px solid #ef4444;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .success {
+        background: #1b3a2a;
+        border-left: 5px solid #22c55e;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        opacity: 0.7;
+    }
+    </style>
+</head>
+
+<body>
 
 <header>
     <h1>Projet : Pixel Art sur NumWorks</h1>
@@ -11,104 +95,16 @@
 
 <div class="container">
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f172a, #111827);
-    color: #e5e7eb;
-}
-
-header {
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(90deg, #2563eb, #7c3aed);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 32px;
-}
-
-header p {
-    opacity: 0.9;
-}
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-}
-
-.card {
-    background: #1f2937;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-h2 {
-    color: #60a5fa;
-}
-
-img {
-    width: 400px;
-    max-width: 100%;
-    border-radius: 10px;
-    margin-top: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-code {
-    background: #0b1220;
-    padding: 15px;
-    display: block;
-    border-radius: 10px;
-    overflow-x: auto;
-    color: #22c55e;
-}
-
-.warning {
-    background: #3b1d1d;
-    border-left: 5px solid #ef4444;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.success {
-    background: #1b3a2a;
-    border-left: 5px solid #22c55e;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    opacity: 0.7;
-}
-</style>
-</head>
-
-<body>
-
-
-
 <!-- INTRO -->
 <div class="card">
 <h2>Introduction</h2>
 <p>
 Dans ce projet, j’ai appris à afficher une image sur une calculatrice NumWorks en utilisant du code Python.
 </p>
-
 <p>
 L’objectif était de comprendre comment une image peut être reproduite à l’aide de pixels et de coordonnées.
 J’ai utilisé une image déjà existante et je l’ai transformée en code.
 </p>
-
 <p>
 Ce travail m’a permis de découvrir les bases de la programmation graphique sur un système simple comme la NumWorks.
 </p>
@@ -127,14 +123,13 @@ Ce travail m’a permis de découvrir les bases de la programmation graphique su
 <p>
 Pour ce projet, je n’ai pas créé le pixel art moi-même. J’ai directement utilisé une image déjà faite, adaptée pour être reproduite sur la calculatrice NumWorks.
 </p>
-
 <p>
-L’objectif était de comprendre comment transformer cette image en code Python sans passer par une conversion manuelle. J'ai d'abord utilisé un site pour redimentionner mon image:
+L’objectif était de comprendre comment transformer cette image en code Python sans passer par une conversion manuelle. J'ai d'abord utilisé un site pour redimensionner mon image :
 </p>
 
-<img src="Capture d’écran_18-5-2026_214348_resizeimage.io.jpeg">
+<img src="capture-resize.jpeg">
 
-<p>Voici un aperçu de l’image réduite à 320 par 222 px:</p>
+<p>Voici un aperçu de l’image réduite à 320 par 222 px :</p>
 <img src="etoileimage.png">
 </div>
 
@@ -144,8 +139,7 @@ L’objectif était de comprendre comment transformer cette image en code Python
 <p>
 J’ai connecté la calculatrice NumWorks à l’ordinateur pour transférer le code Python.
 </p>
-<img src="Capture d’écran_18-5-2026_222848_www.numworks.com.jpeg">
-
+<img src="capture-numworks.jpeg">
 </div>
 
 <!-- ETAPE 4 -->
@@ -198,13 +192,13 @@ for y in range(len(etoile)):
 
         if c == "M":
             couleur = MARRON
-        elif c == "J":
+        if c == "J":
             couleur = JAUNE
-        elif c == "O":
+        if c == "O":
             couleur = ORANGE
-        elif c == "B":
+        if c == "B":
             couleur = BLANC
-        elif c == "N":
+        if c == "N":
             couleur = NOIR
         else:
             continue
@@ -213,14 +207,14 @@ for y in range(len(etoile)):
 </code>
 
 <p>Capture d’écran de l’installation :</p>
-<img src="Capture d’écran_18-5-2026_222533_my.numworks.com.jpeg">
+<img src="capture-my-numworks.jpeg">
 </div>
 
 <!-- ETAPE 5 -->
 <div class="card">
 <h2>5. Résultat final</h2>
 <p>Voici le rendu final sur la calculatrice :</p>
-<img src="Capture d’écran_18-5-2026_223637_my.numworks.com.jpeg">
+<img src="capture-resultat.jpeg">
 </div>
 
 <!-- DIFFICULTES -->
@@ -237,27 +231,22 @@ for y in range(len(etoile)):
 <!-- CONCLUSION -->
 <div class="card success">
 <h2>Conclusion</h2>
-
 <p>
 Pour conclure, ce projet m’a permis de découvrir une nouvelle manière d’utiliser Python sur la calculatrice NumWorks.
 J’ai appris comment une image peut être reproduite grâce à du code en utilisant des pixels, des coordonnées et des couleurs.
 </p>
-
 <p>
 Même si je suis partie d’une image déjà existante, j’ai dû comprendre comment la retranscrire correctement dans le programme afin qu’elle s’affiche de manière fidèle sur la calculatrice.
 J’ai aussi appris à utiliser le module <strong>kandinsky</strong>, qui permet de dessiner directement à l’écran avec Python.
 </p>
-
 <p>
 Ce projet m’a également demandé de faire plusieurs essais pour ajuster la taille, les couleurs et le placement des pixels.
 J’ai rencontré certaines difficultés, comme des images trop grandes ou des problèmes de format, mais cela m’a aidée à mieux comprendre le fonctionnement de l’affichage graphique.
 </p>
-
 <p>
 Enfin, cette activité m’a permis de développer ma logique, ma patience et mes compétences en programmation.
 J’ai trouvé intéressant de voir qu’avec un langage simple comme Python, il est possible de créer des dessins et des projets visuels directement sur une calculatrice.
 </p>
-
 </div>
 
 </div>
